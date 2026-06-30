@@ -1,7 +1,7 @@
 {
-  "name": "quiet-pages",
+  "name": "olivie-pages",
   "version": "1.0.0",
-  "description": "A quiet Astro magazine theme for essays, field notes, and long-form writing.",
+  "description": "A visual editorial front page for discovery, curation, and long-form reading.",
   "private": true,
   "license": "MIT",
   "type": "module",

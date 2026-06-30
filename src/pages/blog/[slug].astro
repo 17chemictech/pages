@@ -86,7 +86,7 @@ const jsonLd = {
           </a>
         )
       }
-      <h1 class="mt-4 font-serif text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
+      <h1 class="mt-4 font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl">
         {post.title}
       </h1>
       <p class="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">{post.excerpt}</p>
@@ -110,7 +110,7 @@ const jsonLd = {
     {
       post.thumbnail && (
         <figure class="mx-auto mt-10 max-w-4xl">
-          <div class="overflow-hidden rounded-md bg-muted">
+          <div class="overflow-hidden rounded-[2rem] border border-border/70 bg-muted shadow-[0_18px_56px_rgba(31,35,25,0.05)]">
             <Image src={post.thumbnail} alt={post.imageCredit?.caption ?? ""} class="w-full" />
           </div>
           {
@@ -151,7 +151,7 @@ const jsonLd = {
           <Content />
         </div>
 
-        <div class="mt-10 flex flex-wrap items-center gap-2">
+        <div class="mt-10 flex flex-wrap items-center gap-2 rounded-[1.5rem] border border-border/70 bg-white p-4 shadow-[0_12px_36px_rgba(31,35,25,0.04)]">
           <span class="text-xs uppercase tracking-wider text-muted-foreground">Tags</span>
           {
             post.tags.map((tag) => {
@@ -165,7 +165,7 @@ const jsonLd = {
           }
         </div>
 
-        <div class="mt-8 flex items-center gap-2 border-y border-border py-4">
+        <div class="mt-8 flex items-center gap-2 rounded-[1.5rem] border border-border/70 bg-[#fffdf8] p-4">
           <span class="text-xs uppercase tracking-wider text-muted-foreground">Share</span>
           <a target="_blank" rel="noreferrer" aria-label="Share on Twitter" data-share-twitter data-share-title={post.title} href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(shareUrl)}`} class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground hover:text-primary"><Icon name="twitter" class="h-3.5 w-3.5" /></a>
           <a target="_blank" rel="noreferrer" aria-label="Share on LinkedIn" data-share-linkedin href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`} class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground hover:text-primary"><Icon name="linkedin" class="h-3.5 w-3.5" /></a>
@@ -177,7 +177,7 @@ const jsonLd = {
 
         {
           author && (
-            <div class="mt-10 flex items-start gap-4 rounded-md border border-border p-5">
+            <div class="mt-10 flex items-start gap-4 rounded-[1.5rem] border border-border/70 bg-white p-5 shadow-[0_12px_36px_rgba(31,35,25,0.04)]">
               <img src={author.avatar} alt="" width="56" height="56" class="h-14 w-14 rounded-full" />
               <div>
                 <div class="text-xs uppercase tracking-wider text-muted-foreground">Written by</div>
@@ -213,7 +213,7 @@ const jsonLd = {
           }
         </nav>
 
-        <div class="mt-12 rounded-md border border-dashed border-border p-8 text-center">
+        <div class="mt-12 rounded-[1.5rem] border border-dashed border-border bg-[#fffdf8] p-8 text-center">
           <Icon name="message" class="mx-auto h-5 w-5 text-muted-foreground" />
           <div class="mt-2 font-serif text-lg">Comments</div>
           <p class="mt-1 text-sm text-muted-foreground">Hook this up to your favourite commenting platform &mdash; Giscus, Disqus, or your own.</p>

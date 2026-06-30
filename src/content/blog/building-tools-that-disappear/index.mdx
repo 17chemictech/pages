@@ -1,11 +1,11 @@
 ---
-title: "Building tools that disappear"
-excerpt: "The best software for thinking gets out of the way. A short meditation on restraint as an engineering value."
+title: "Building a pages layer without turning it into a second blog"
+excerpt: "A small architecture note on roles, duplication, and why not every domain should publish the same thing."
 date: 2026-04-30
-readingTime: 6
+readingTime: 5
 category: "engineering"
 tags: ["tools", "minimalism", "web"]
-author: "samuel-okafor"
+author: "chen"
 thumbnail: ./cover.jpg
 imageCredit:
   caption: "A quiet desk setup with code, a plant, and a cup within reach."
@@ -15,37 +15,29 @@ imageCredit:
   sourceUrl: "https://unsplash.com/photos/kGckUUhBJC8?utm_source=quiet_pages&utm_medium=referral"
 ---
 
-Every interface is an opinion about what matters. The most generous opinion is often the smallest one.
+The easiest mistake in personal publishing is to let every surface publish everything. It feels productive for a week and chaotic for a year.
 
-## The quiet shape of an idea
+## Surfaces are jobs
 
-There is a particular kind of pleasure in returning to a piece of writing after it has had time to settle. The sentences look at you differently. Some have grown weightier. Others, weightless, ask to be removed entirely.
+When I separate `www`, `blog`, `pages`, and `letters`, I am not multiplying websites for the sake of it. I am assigning jobs:
 
-Most of what I write begins as a small observation &mdash; a single image, an overheard phrase, a question that refuses to leave. I keep these in a plain text file and let them sit for as long as they need.
+- one domain introduces
+- one domain archives
+- one domain attracts
+- one channel retains
 
-> The best ideas are patient. They do not announce themselves; they accumulate.
+That structure makes the writing workflow simpler, not heavier.
 
-## Working in the open
+## Duplication is a maintenance bug
 
-Working in public is a deliberate constraint. It changes the kinds of decisions you make and the speed at which you make them. It is not, as is sometimes claimed, simply a marketing tactic.
+If the same article appears in full on three surfaces, then metadata, links, revisions, and analytics all become harder to trust. You also teach readers that any entry point is interchangeable, which makes brand memory weaker instead of stronger.
 
-### A shorter feedback loop
+## Build for handoff
 
-The most useful effect is the shorter loop between intention and response. A piece published this morning may be read by a hundred people before lunch, and a thoughtful reply will arrive that reshapes the next draft.
+The better pattern is:
 
-- Write first, edit later &mdash; but never publish without editing.
-- Trust the reader's intelligence. Cut anything that explains too much.
-- Prefer the concrete to the abstract.
+- publish the full piece once
+- summarize or frame it elsewhere
+- use each surface to move readers toward the next one
 
-## A note on tools
-
-The tools matter less than people imagine, but they matter. A good editor disappears. A bad one inserts itself between you and the thought you were chasing.
-
-```js
-// a small helper I keep returning to
-const words = (text) => text.trim().split(/\s+/).filter(Boolean).length;
-```
-
-### Closing
-
-If there is a single thread running through these notes, it is this: do the work, do it slowly, and let it be plain. Readers will meet you the rest of the way.
+That kind of system disappears in use, which is exactly what a good publishing stack should do.

@@ -6,40 +6,45 @@ import { SITE, authors } from "../lib/blog-data.js";
 
 <BaseLayout
   title={`About - ${SITE.name}`}
-  description={`About ${SITE.name}: an independent magazine on writing, design, and the slow web.`}
+  description={`About ${SITE.name}: a visual editorial front page for discovery, essays, and curated internet taste.`}
   canonical="/about"
 >
   <div class="mx-auto max-w-3xl px-5 py-12">
     <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About" }]} />
 
     <header class="mt-6">
-      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">About</div>
-      <h1 class="mt-2 font-serif text-5xl font-semibold leading-[1.05] tracking-tight">
-        A quiet magazine for the open web.
+      <div class="text-xs font-medium uppercase tracking-[0.24em] text-primary">About</div>
+      <h1 class="mt-2 font-serif text-5xl font-semibold leading-[1.02] tracking-tight">
+        A brighter editorial layer for the Olivie web.
       </h1>
+      <p class="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
+        `pages.olivie.space` is the discovery surface: more curated than a feed, lighter than a full archive, and designed to turn visual interest into deeper reading.
+      </p>
     </header>
 
     <div class="prose-article mt-10">
       <p>
-        {SITE.name} began as a folder of notes, drafts, and half-finished essays &mdash; the kind of writing that doesn't survive the timeline. We started publishing it here because we wanted somewhere slower to read, and somewhere slower to write.
+        This site is intentionally front-of-house. It exists to make essays, notes, and internet finds feel approachable, desirable, and worth opening. The mood borrows from editorial retail: sharp hierarchy, soft surfaces, and clear paths into deeper content.
       </p>
       <p>
-        The magazine is independent, occasional, and unsponsored. We publish when the work is ready and not before. There are no trackers, no pop-ups, and no infinite scroll. Just sentences, photographs, and the occasional conversation.
+        In the larger Olivie structure, the responsibilities are split on purpose. The main site introduces the person, the blog keeps the long-term archive, the newsletter keeps the relationship, and this pages layer handles discovery.
       </p>
-      <h2 id="what-we-publish">What we publish</h2>
+      <h2 id="what-we-publish">What belongs here</h2>
       <p>
-        Essays on writing, design, and the craft of the web. Field notes from places we love. Interviews with people who make things with their hands. The occasional photograph, when one is worth printing.
+        Featured essays, category-led entry points, campaign-like collections, launch notes, visual curation, and the kinds of posts people are most likely to click, save, and forward.
       </p>
-      <h2 id="who-we-are">Who we are</h2>
-      <p>A small editorial team, scattered across three time zones, who would rather be reading.</p>
+      <h2 id="where-it-leads">Where it leads</h2>
+      <p>
+        When someone wants the full archive, they should move on to the blog. When they want ongoing curation, they should join the newsletter. This page wins when it makes those next steps feel natural.
+      </p>
     </div>
 
-    <section class="mt-12 border-t border-border pt-10">
+    <section class="mt-12 rounded-[2rem] border border-border/70 bg-white p-8 shadow-[0_18px_56px_rgba(31,35,25,0.05)]">
       <h2 class="font-serif text-2xl font-semibold tracking-tight">Contributors</h2>
       <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {
           authors.map((author) => (
-            <a href={`/authors/${author.slug}`} class="group flex items-start gap-3">
+            <a href={`/authors/${author.slug}`} class="group flex items-start gap-3 rounded-[1.25rem] border border-border/60 bg-[#fffdf8] p-4 transition-transform hover:-translate-y-0.5">
               <img src={author.avatar} alt="" width="48" height="48" class="h-12 w-12 rounded-full" />
               <div>
                 <div class="font-serif text-base font-semibold group-hover:text-primary">{author.name}</div>
