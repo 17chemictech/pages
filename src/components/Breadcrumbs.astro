@@ -4,7 +4,7 @@ import Icon from "./Icon.astro";
 const { items = [] } = Astro.props;
 ---
 
-<nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
+<nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-1 text-[0.72rem] font-medium uppercase tracking-[0.22em] text-muted-foreground">
   {
     items.map((item, index) => (
       <span class="flex items-center gap-1">

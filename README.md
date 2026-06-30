@@ -1,15 +1,15 @@
-# QuietPages - Astro Magazine Theme
+# Olivie Pages - Editorial Discovery Site
 
-[![Quiet Pages theme preview](./preview.webp)](https://quietpages-eta.vercel.app/)
+[![Olivie Pages preview](./preview.webp)](https://pages.olivie.space/)
 
 ![Astro 6](https://img.shields.io/badge/Astro-6-ff5d01?style=for-the-badge&logo=astro&logoColor=white)
 ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![MDX](https://img.shields.io/badge/MDX-enabled-1b1f24?style=for-the-badge&logo=mdx&logoColor=white)
 ![License MIT](https://img.shields.io/badge/License-MIT-111827?style=for-the-badge)
 
-Preview: [quietpages-eta.vercel.app](https://quietpages-eta.vercel.app/)
+Preview: [pages.olivie.space](https://pages.olivie.space/)
 
-QuietPages is a calm Astro theme for independent magazines, personal journals, and long-form editorial sites. It keeps the reading experience simple and fast while including the pieces a production-ready publication needs: archives, taxonomy pages, author pages, RSS, sitemap, structured metadata, and self-hosted fonts.
+Olivie Pages is a visual editorial front page built with Astro for discovery, curation, and long-form reading. It is designed to sit between a main personal site, a deeper blog archive, and a newsletter channel.
 
 ## Features
 

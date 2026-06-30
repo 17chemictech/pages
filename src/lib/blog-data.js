@@ -3,53 +3,53 @@ import { getCollection } from "astro:content";
 const siteUrl = (
   import.meta.env.SITE_URL ||
   import.meta.env.PUBLIC_SITE_URL ||
-  "https://quietpages-eta.vercel.app"
+  "https://pages.olivie.space"
 ).replace(/\/$/, "");
 
 export const authors = [
   {
-    slug: "elena-march",
-    name: "Elena March",
-    bio: "Writer & editor covering design, craft, and slow technology.",
+    slug: "olivie-desk",
+    name: "Olivie Desk",
+    bio: "Editorial voice behind the site's front page, features, and curated internet picks.",
     longBio:
-      "Elena March writes about the quiet edges of design and technology. Previously an editor at two small magazines, she now publishes essays and field notes from a desk overlooking the harbour.",
+      "Olivie Desk shapes the front-of-house layer of the site: homepage packages, reading lists, launch notes, and feature stories designed to attract attention before sending readers into the archive or the newsletter.",
     avatar: "https://i.pravatar.cc/200?img=47",
   },
   {
-    slug: "samuel-okafor",
-    name: "Samuel Okafor",
-    bio: "Software engineer with a soft spot for typography and the open web.",
+    slug: "chen",
+    name: "Chen",
+    bio: "Builder, curator, and operator working across personal sites, tools, and editorial systems.",
     longBio:
-      "Samuel builds tools for writers and reads more than he ships. He believes the best interfaces are the ones you don't notice.",
+      "Chen works at the intersection of independent publishing, product thinking, and internet infrastructure. Most notes begin with a domain, a workflow, or a publishing problem worth simplifying.",
     avatar: "https://i.pravatar.cc/200?img=12",
   },
   {
-    slug: "mira-iwasaki",
-    name: "Mira Iwasaki",
-    bio: "Photographer and essayist based between Kyoto and Lisbon.",
+    slug: "guest-notes",
+    name: "Guest Notes",
+    bio: "Occasional outside voices, observations, and small interviews that fit the site's taste.",
     longBio:
-      "Mira's work sits at the intersection of place, memory, and the everyday object. Her essays have appeared in a number of small but loved publications.",
+      "Guest Notes is a flexible byline for conversations, collaborative pieces, and field observations that add range without turning the site into a multi-author publication.",
     avatar: "https://i.pravatar.cc/200?img=32",
   },
 ];
 
 export const categories = [
-  { slug: "essays", name: "Essays" },
-  { slug: "design", name: "Design" },
-  { slug: "engineering", name: "Engineering" },
-  { slug: "field-notes", name: "Field Notes" },
-  { slug: "interviews", name: "Interviews" },
+  { slug: "essays", name: "Features" },
+  { slug: "design", name: "Interface" },
+  { slug: "engineering", name: "Build Notes" },
+  { slug: "field-notes", name: "Dispatches" },
+  { slug: "interviews", name: "Conversations" },
 ];
 
 export const tags = [
   { slug: "writing", name: "Writing" },
-  { slug: "typography", name: "Typography" },
-  { slug: "minimalism", name: "Minimalism" },
+  { slug: "typography", name: "Type" },
+  { slug: "minimalism", name: "Restraint" },
   { slug: "tools", name: "Tools" },
-  { slug: "travel", name: "Travel" },
-  { slug: "process", name: "Process" },
+  { slug: "travel", name: "Places" },
+  { slug: "process", name: "Workflow" },
   { slug: "web", name: "Web" },
-  { slug: "books", name: "Books" },
+  { slug: "books", name: "Reading" },
 ];
 
 const isoDate = (date) => date?.toISOString().slice(0, 10);
@@ -107,8 +107,8 @@ export const formatDate = (iso) =>
   });
 
 export const SITE = {
-  name: "Quiet Pages",
+  name: "Olivie Pages",
   description:
-    "An independent magazine on writing, design, and the slow web. Published occasionally, read closely.",
+    "A visual front page for features, dispatches, and the internet things worth keeping.",
   url: siteUrl,
 };

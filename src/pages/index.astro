@@ -22,127 +22,135 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
 ---
 
 <BaseLayout
-  title={`${SITE.name} - Writing, design & the slow web`}
+  title={`${SITE.name} - Discover essays, notes & curated internet taste`}
   description={SITE.description}
   canonical="/"
   flushFooter
 >
-  <section class="relative -mt-[calc(4rem+2px)] min-h-[calc(100svh-2rem)] overflow-hidden border-b border-border/60 pt-[calc(4rem+2px)] sm:min-h-[760px]">
-    <Image
-      src={autumnScene}
-      alt=""
-      class="absolute inset-0 h-full w-full object-cover object-center"
-      loading="eager"
-      decoding="async"
-      widths={[640, 960, 1280, 1920, 2560]}
-      sizes="100vw"
-    />
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 bg-[linear-gradient(90deg,oklch(0.1_0.02_70_/_0.68),oklch(0.16_0.02_80_/_0.38)_46%,oklch(0.98_0.01_90_/_0.1))] dark:bg-[linear-gradient(90deg,oklch(0.08_0.01_70_/_0.78),oklch(0.08_0.01_70_/_0.52)_48%,oklch(0.08_0.01_70_/_0.18))]"
-    />
-    <div
-      aria-hidden="true"
-      class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/45 via-black/18 to-transparent"
-    />
-    <div
-      aria-hidden="true"
-      class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/72 to-transparent"
-    />
-    <div class="relative mx-auto flex min-h-[calc(100svh-6rem)] max-w-6xl items-center px-5 py-20 sm:min-h-[680px] sm:py-24">
-      <div class="max-w-4xl text-white drop-shadow-[0_1px_18px_rgba(0,0,0,0.28)]">
-        <h1 class="font-serif text-[2.5rem] font-medium leading-[1.02] tracking-[-0.02em] sm:text-6xl lg:text-7xl">
-        An independent magazine on
-          <span class="italic text-white"> writing</span>,
-          <span class="italic text-white"> design</span>, and the
-          <span class="italic text-white"> slow web</span>.
+  <section class="border-b border-border/60 bg-[radial-gradient(circle_at_top_left,_rgba(214,224,200,0.45),_transparent_36%),linear-gradient(180deg,#fffef8_0%,#fbfaf5_48%,#f7f5ef_100%)]">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:py-18">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-border bg-white/80 px-3 py-1 text-[0.7rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">
+          <span class="h-2 w-2 rounded-full bg-primary"></span>
+          Pages by Olivie
+        </div>
+        <h1 class="mt-5 max-w-3xl font-serif text-[3rem] font-semibold leading-[0.94] tracking-[-0.04em] text-foreground sm:text-[4.35rem]">
+          A brighter front page for essays, bookmarks, and the things worth keeping.
         </h1>
-        <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/86">
-          Essays, field notes, and conversations &mdash; published occasionally, edited carefully, and meant to be read in a single sitting.
+        <p class="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+          Part editorial desk, part taste index. Discover long reads, small field notes, and the internet objects that deserve more than a passing scroll.
         </p>
-        <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <div class="mt-8 flex flex-wrap gap-3">
           <a
             href={`/blog/${featured.slug}`}
-            class="group inline-flex items-center gap-2 border-b border-white pb-1 text-sm font-medium text-white hover:border-white/70 hover:text-white/82"
+            class="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
           >
-            Begin with this issue's lead essay
-            <Icon name="arrow-right" class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+            Start with the lead story
+            <Icon name="arrow-right" class="h-3.5 w-3.5" />
           </a>
-          <a href="/blog" class="text-sm text-white/76 hover:text-white">
-            Or browse the archive
+          <a
+            href="https://quaily.com/csworld"
+            class="inline-flex items-center gap-2 rounded-full border border-border bg-white px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
+          >
+            Join the newsletter
           </a>
+        </div>
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-2xl border border-border/70 bg-white/80 p-4 shadow-[0_16px_40px_rgba(30,36,20,0.05)]">
+            <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">Weekly rhythm</div>
+            <div class="mt-2 font-serif text-2xl text-foreground">1 note</div>
+            <p class="mt-2 text-sm text-muted-foreground">A small, high-signal cadence rather than a noisy publishing treadmill.</p>
+          </div>
+          <div class="rounded-2xl border border-border/70 bg-white/80 p-4 shadow-[0_16px_40px_rgba(30,36,20,0.05)]">
+            <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">Content mix</div>
+            <div class="mt-2 font-serif text-2xl text-foreground">Essays + picks</div>
+            <p class="mt-2 text-sm text-muted-foreground">Longer reading paired with the lighter things people actually save and share.</p>
+          </div>
+          <div class="rounded-2xl border border-border/70 bg-white/80 p-4 shadow-[0_16px_40px_rgba(30,36,20,0.05)]">
+            <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">Destination</div>
+            <div class="mt-2 font-serif text-2xl text-foreground">Quaily inbox</div>
+            <p class="mt-2 text-sm text-muted-foreground">Use this page to attract attention, then turn that attention into a subscribing relationship.</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid gap-4 lg:pl-4">
+        <article class="overflow-hidden rounded-[2rem] border border-border/70 bg-white shadow-[0_18px_60px_rgba(31,35,25,0.09)]">
+          <div class="aspect-[5/4] overflow-hidden bg-muted">
+            <Image
+              src={autumnScene}
+              alt=""
+              class="h-full w-full object-cover object-center"
+              loading="eager"
+              decoding="async"
+              widths={[640, 960, 1280]}
+              sizes="(max-width: 1024px) 100vw, 42vw"
+            />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">
+              <span>Editor's spotlight</span>
+              <span>{formatDate(featured.date)}</span>
+            </div>
+            <h2 class="mt-3 font-serif text-2xl font-semibold leading-tight text-foreground">{featured.title}</h2>
+            <p class="mt-3 text-sm leading-6 text-muted-foreground">{featured.excerpt}</p>
+            <a href={`/blog/${featured.slug}`} class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary">
+              Read feature <Icon name="arrow-right" class="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </article>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-[1.5rem] border border-border/70 bg-[#dce8cf] p-5">
+            <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-foreground/68">Channel</div>
+            <h3 class="mt-2 font-serif text-2xl font-semibold text-foreground">Inbox first</h3>
+            <p class="mt-2 text-sm leading-6 text-foreground/72">Subscriber-only curation, launch notes, and the sharper angle behind each post.</p>
+          </div>
+          <div class="rounded-[1.5rem] border border-border/70 bg-[#f6ddd7] p-5">
+            <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-foreground/68">Browse</div>
+            <h3 class="mt-2 font-serif text-2xl font-semibold text-foreground">By mood</h3>
+            <p class="mt-2 text-sm leading-6 text-foreground/72">Design, essays, interviews, field notes, and whatever feels bookmarkable this week.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="border-b border-border/60">
+  <section class="border-b border-border/60 bg-white">
     <div class="mx-auto max-w-6xl px-5 py-16">
       <div class="mb-6 flex items-center justify-between">
-        <div class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Featured</div>
-        <a href="/blog" class="text-xs text-muted-foreground hover:text-foreground">All writing &rarr;</a>
+        <div class="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">Curated lanes</div>
+        <a href="/blog" class="text-xs text-muted-foreground hover:text-foreground">Full archive &rarr;</a>
       </div>
-      <article class="grid gap-10 lg:grid-cols-2">
-        <a href={`/blog/${featured.slug}`} class="group block" aria-label={`Read ${featured.title}`}>
-          <div class="aspect-[4/3] overflow-hidden rounded-md bg-muted">
-            {
-              featured.thumbnail && (
-                <Image
-                  src={featured.thumbnail}
-                  alt=""
-                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-              )
-            }
-          </div>
-        </a>
-        <div class="flex flex-col justify-center">
-          <div class="flex items-center gap-3 text-xs uppercase tracking-wider text-muted-foreground">
-            {
-              featuredCategory && (
-                <a href={`/categories/${featuredCategory.slug}`} class="text-primary hover:underline">
-                  {featuredCategory.name}
-                </a>
-              )
-            }
-            <span>&middot;</span>
-            <time datetime={featured.date}>{formatDate(featured.date)}</time>
-          </div>
-          <a href={`/blog/${featured.slug}`}>
-            <h2 class="mt-3 font-serif text-3xl font-semibold leading-tight tracking-tight hover:text-primary sm:text-4xl">
-              {featured.title}
-            </h2>
-          </a>
-          <p class="mt-4 text-lg text-muted-foreground">{featured.excerpt}</p>
-          <div class="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
-            {
-              featuredAuthor && (
-                <>
-                  <Image
-                    src={featuredAuthor.avatar}
-                    alt=""
-                    width={28}
-                    height={28}
-                    class="h-7 w-7 rounded-full"
-                  />
-                  <a href={`/authors/${featuredAuthor.slug}`} class="hover:text-foreground">{featuredAuthor.name}</a>
-                  <span>&middot;</span>
-                </>
-              )
-            }
-            <span>{featured.readingTime} min read</span>
-          </div>
-          <a href={`/blog/${featured.slug}`} class="mt-6 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-            Read the essay <Icon name="arrow-right" class="h-3.5 w-3.5" />
-          </a>
+      <div class="grid gap-5 lg:grid-cols-4">
+        <div class="rounded-[1.75rem] border border-border bg-[#f4efe7] p-6">
+          <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">Lane 01</div>
+          <h2 class="mt-3 font-serif text-2xl font-semibold text-foreground">Read like a buyer.</h2>
+          <p class="mt-3 text-sm leading-6 text-muted-foreground">Think of each post as a pick: selected for utility, tone, and the chance you'll want to return to it.</p>
         </div>
-      </article>
+        <div class="rounded-[1.75rem] border border-border bg-[#fffdf8] p-6">
+          <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">Lane 02</div>
+          <h2 class="mt-3 font-serif text-2xl font-semibold text-foreground">Save what lingers.</h2>
+          <p class="mt-3 text-sm leading-6 text-muted-foreground">Shortlist the pieces with staying power, then move readers into a recurring relationship through email.</p>
+        </div>
+        <div class="rounded-[1.75rem] border border-border bg-[#eef2e8] p-6">
+          <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">Lane 03</div>
+          <h2 class="mt-3 font-serif text-2xl font-semibold text-foreground">Style the archive.</h2>
+          <p class="mt-3 text-sm leading-6 text-muted-foreground">Categories, tags, and feature shelves make the site feel browsable rather than purely chronological.</p>
+        </div>
+        <div class="rounded-[1.75rem] border border-border bg-[#f9e9e2] p-6">
+          <div class="text-[0.68rem] font-medium uppercase tracking-[0.24em] text-muted-foreground">Lane 04</div>
+          <h2 class="mt-3 font-serif text-2xl font-semibold text-foreground">Turn discovery into return visits.</h2>
+          <p class="mt-3 text-sm leading-6 text-muted-foreground">The page attracts the click; the newsletter earns the second and third visit.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="mx-auto max-w-6xl px-5 py-16" data-home-latest>
     <div class="flex flex-wrap items-center justify-between gap-4">
-      <h2 class="font-serif text-2xl font-semibold tracking-tight">Latest</h2>
+      <div>
+        <div class="text-xs font-medium uppercase tracking-[0.24em] text-muted-foreground">Fresh picks</div>
+        <h2 class="mt-2 font-serif text-3xl font-semibold tracking-tight">Browse by category, then fall into the archive.</h2>
+      </div>
       <div class="flex flex-wrap gap-2">
         <button
           type="button"
@@ -174,7 +182,7 @@ const latest = (await sortedPosts()).filter((post) => post.slug !== featured.slu
     </div>
 
     <div class="mt-12 text-center">
-      <a href="/blog" class="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium hover:bg-muted">
+      <a href="/blog" class="inline-flex items-center gap-2 rounded-full border border-border bg-white px-5 py-2.5 text-sm font-medium hover:bg-muted">
         Browse the archive <Icon name="arrow-right" class="h-3.5 w-3.5" />
       </a>
     </div>
